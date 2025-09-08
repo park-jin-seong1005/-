@@ -6,10 +6,11 @@
   --surface: #ffffff;
   --text: #2b2b2b;
   --muted: #6b7176;
-  --primary: #25c3a3; /* 포인트 컬러 (민트) */
-  --primary-weak: #e7fbf6;
-  --border: #e9edf0;
-  --shadow: 0 6px 20px rgba(0,0,0,.06);
+  --primary: #25c3a3; /* 민트 */
+  --primary-weak: #e0f7f3; /* 카드/섹션 약한 민트 */
+  --accent: #2b7a78; /* 강조 색상 */
+  --border: #e0e5e8;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
 *{ box-sizing: border-box; }
@@ -276,6 +277,27 @@ body{
   color: #fff;
 }
 
+.cards article.card{
+  background: var(--primary-weak);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cards article.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.tags span{
+  background: #d2f2ed;
+  border-color: #a6e1d7;
+}
+.links a{
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.links a:hover{
+  background: var(--accent);
+  color: #fff;
+}
 /* 연락처 */
 .contact{
   list-style: none;
