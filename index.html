@@ -343,7 +343,7 @@
         <!-- 프로필 이미지 경로: /images/profile.jpg 로 저장 -->
         <img src="images/profile.jpg" alt="박진성 프로필 사진" />
         <h2 class="name">Park JinSeong</h2>
-        <p class="role">SW Developer</p>
+        <p class="role">SW AI Developer</p>
       </div>
 
       <nav class="menu" aria-label="Section navigation">
@@ -351,7 +351,7 @@
         <a href="#experience" class="menu-link">Experience</a>
         <a href="#skillset" class="menu-link">SkillSet</a>
         <a href="#portfolio" class="menu-link">Portfolio</a>
-        <a href="#Achievements" class="menu-link">Achievements & Research</a>
+        <a href="#achievements" class="menu-link">Achievements & Research</a>
         <a href="#contact" class="menu-link">Contact</a>
       </nav>
     </aside>
@@ -373,7 +373,7 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // 스크롤 시 사이드 메뉴 하이라이트
-  const sections = document.querySelectorAll('main .section');
+  const sections = document.querySelectorAll('.section');
   const links = document.querySelectorAll('.menu-link');
   const map = {};
   sections.forEach(s => { map['#' + s.id] = s; });
