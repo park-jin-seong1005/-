@@ -109,16 +109,13 @@
             <div class="bar"><i style="width: 65%"></i></div>
             </div>
         </div>
-            <!-- Certificates -->
-        <div class="certificates">
-            <h3 class="subtitle">Certificates</h3>
-            <ul>
-            <li>정보처리기사 </li>
-            <li>SQLD (SQL 개발자 자격증)</li>
-            <li>리눅스마스터 2급</li>
-            <li>컴퓨터활용능력 1급</li>
-            <li>TOEIC SPeaking IH</li>
-            </ul>
+        <!-- 자격증 -->
+        <div class="chips" style="margin-top: 1.5rem;">
+            <span class="chip">정보처리기사</span>
+            <span class="chip">SQLD (SQL 개발자 자격증)</span>
+            <span class="chip">리눅스마스터 2급</span>
+            <span class="chip">컴퓨터활용능력 1급</span>
+            <span class="chip">TOEIC SPeaking IH</span>
         </div>
         </section>
 
@@ -354,36 +351,55 @@
         <a href="#experience" class="menu-link">Experience</a>
         <a href="#skillset" class="menu-link">SkillSet</a>
         <a href="#portfolio" class="menu-link">Portfolio</a>
-        <a href="#Achievements & Research" class="menu-link">Achievements & Research</a>
+        <a href="#Achievements" class="menu-link">Achievements & Research</a>
         <a href="#contact" class="menu-link">Contact</a>
       </nav>
     </aside>
   </div>
+<style>
+  html {
+    scroll-behavior: smooth; /* 부드럽게 스크롤 */
+  }
+  .menu-link.active {
+    background: white;
+    color: black;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+</style>
 
-  <script>
-    // 현재 연도
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+  // 현재 연도
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // 스크롤 시 사이드 메뉴 하이라이트
-    const sections = document.querySelectorAll('main .section');
-    const links = document.querySelectorAll('.menu-link');
+  // 스크롤 시 사이드 메뉴 하이라이트
+  const sections = document.querySelectorAll('main .section');
+  const links = document.querySelectorAll('.menu-link');
+  const map = {};
+  sections.forEach(s => { map['#' + s.id] = s; });
 
-    const map = {};
-    sections.forEach(s => { map['#' + s.id] = s; });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = '#' + entry.target.id;
+      const link = document.querySelector(`.menu a[href="${id}"]`);
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.1 });
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = '#' + entry.target.id;
-        const link = document.querySelector(`.menu a[href="${id}"]`);
-        if (!link) return;
-        if (entry.isIntersecting) {
-          links.forEach(a => a.classList.remove('active'));
-          link.classList.add('active');
-        }
-      });
-    }, {  rootMargin: "-40% 0px -55% 0px", threshold: 0.01});
+  sections.forEach(s => io.observe(s));
 
-    sections.forEach(s => io.observe(s));
-  </script>
-</body>
-</html>
+  // 클릭 시 살짝 offset 조정 (상단 여백 확보)
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
+      const y = target.getBoundingClientRect().top + window.scrollY - 50; // 50px offset
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+</script>
