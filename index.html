@@ -46,21 +46,21 @@
 
         <ul class="timeline">
           <li>
-            <div class="time">2024.07 – 2024.08</div>
+            <div class="time">2022.05 – 현재</div>
             <div class="desc">
-              <b>계절학기 현장실습</b> — 백엔드 API 유지보수 및 간단한 CRUD 기능 개발
+              <b>연구실 학부연구생</b> — 창원대 컴퓨터공학과 분산멀티미디어 연구실 소속, 논문 1저자 2편 및 특허 1건
             </div>
           </li>
           <li>
-            <div class="time">2024.03 – 2024.06</div>
+            <div class="time">2024.01 – 2024.03</div>
             <div class="desc">
-              <b>팀 프로젝트</b> — Spring Boot + MySQL로 소규모 웹 서비스 제작, 배포 자동화 경험(GitHub Actions)
+              <b>팀 프로젝트</b> — 자율주행 위험감지 시스템 개발, 위험 상황 인식 모델 구현
             </div>
           </li>
           <li>
-            <div class="time">2023 – 현재</div>
+            <div class="time">2025.05 – 2025.07</div>
             <div class="desc">
-              <b>개인 학습</b> — Java, Spring Boot, JPA, REST API, Git/GitHub, 배포(EC2) 등
+              <b>팀 프로젝트</b> — 고어라운드(Go-Around) 모델 개발 및 제주공항 날씨 데이터 특징 분석
             </div>
           </li>
         </ul>
@@ -71,80 +71,177 @@
         <h2 class="title-2">SkillSet</h2>
 
         <div class="chips">
-          <span class="chip">python</span>
-          <span class="chip">Spring Boot</span>
-          <span class="chip">JPA / Hibernate</span>
-          <span class="chip">REST API</span>
-          <span class="chip">MySQL</span>
-          <span class="chip">Git / GitHub</span>
-          <span class="chip">Docker(기초)</span>
-          <span class="chip">AWS EC2(배포)</span>
+            <!-- 언어/프레임워크 -->
+            <span class="chip">Python</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">React</span>
+            <span class="chip">C</span>
+
+            <!-- 데이터/DB -->
+            <span class="chip">MySQL</span>
+
+            <span class="chip">PyTorch</span>
+            <span class="chip">pandas</span>
+            <span class="chip">OpenCV </span>
+            <span class="chip">CUDA / GPU</span>
+
+            <!-- DevOps / 배포 -->
+            <span class="chip">Docker</span>
+            <span class="chip">AWS EC2</span>
+            <span class="chip">Git / GitHub</span>
         </div>
 
         <div class="skills">
-          <div class="skill">
-            <div class="skill-head"><span>Java / Spring</span><span>상</span></div>
-            <div class="bar"><i style="width: 85%"></i></div>
-          </div>
-          <div class="skill">
-            <div class="skill-head"><span>DB 설계 / SQL</span><span>중상</span></div>
+            <div class="skill">
+            <div class="skill-head"><span>Python / PyTorch</span><span>중상</span></div>
             <div class="bar"><i style="width: 75%"></i></div>
-          </div>
-          <div class="skill">
-            <div class="skill-head"><span>CI/CD · 배포</span><span>중</span></div>
-            <div class="bar"><i style="width: 60%"></i></div>
-          </div>
+            </div>
+            <div class="skill">
+            <div class="skill-head"><span>DB 설계 / SQL</span><span>상</span></div>
+            <div class="bar"><i style="width: 80%"></i></div>
+            </div>
+            <div class="skill">
+            <div class="skill-head"><span>React / Frontend</span><span>중</span></div>
+            <div class="bar"><i style="width: 70%"></i></div>
+            </div>
+            <div class="skill">
+            <div class="skill-head"><span>Docker / AWS</span><span>중</span></div>
+            <div class="bar"><i style="width: 65%"></i></div>
+            </div>
         </div>
-      </section>
+        </section>
 
       <!-- Portfolio -->
       <section id="portfolio" class="section">
         <h2 class="title-2">Portfolio</h2>
 
         <div class="cards">
-          <!-- 프로젝트 카드 예시 1 -->
-          <article class="card">
-            <h3 class="card-title">Habit Planner</h3>
-            <p class="card-desc">
-              Spring Boot와 JPA로 구현한 습관 관리 서비스. JWT 인증, 일정 리마인드, 통계 대시보드 제공.
-            </p>
-            <div class="tags">
-              <span>Spring Boot</span><span>JPA</span><span>MySQL</span>
-            </div>
-            <div class="links">
-              <a href="https://github.com/본인아이디/habit-planner" target="_blank" rel="noopener">GitHub</a>
-              <a href="#" target="_blank" rel="noopener">Demo</a>
-            </div>
-          </article>
+            <!-- 1. SW-딥페이크 음성 검출 -->
+            <article class="card">
+                <h3 class="card-title">SW-딥페이크 음성 검출</h3>
+                <p class="card-desc">
+                딥러닝 기반 음성 딥페이크 검출 프로젝트. PyTorch 및 GPU 환경 사용, 데이터 전처리와 모델 학습 진행. SW-딥페이크 경진대회 13등 달성.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>PyTorch</span><span>GPU</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/deepfake-audio" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
 
-          <!-- 프로젝트 카드 예시 2 -->
-          <article class="card">
-            <h3 class="card-title">Book Review API</h3>
-            <p class="card-desc">
-              책 리뷰 REST API. 계정/권한, 페이징, 예외 처리, 통합 테스트 작성.
-            </p>
-            <div class="tags">
-              <span>Spring</span><span>REST</span><span>JUnit</span>
-            </div>
-            <div class="links">
-              <a href="https://github.com/본인아이디/book-review-api" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
+            <!-- 2. 세종AI 경진대회 -->
+            <article class="card">
+                <h3 class="card-title">세종AI 경진대회 – 자율주행 위험감지 시스템</h3>
+                <p class="card-desc">
+                자율주행 차량 위험 감지 모델 개발, 영상 데이터 기반 객체 탐지 및 위험 상황 예측. PyTorch와 OpenCV 활용.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>PyTorch</span><span>OpenCV</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/sejong-autonomous-safety" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
 
-          <!-- 프로젝트 카드 예시 3 -->
-          <article class="card">
-            <h3 class="card-title">Mini Todo</h3>
-            <p class="card-desc">
-              간단한 Todo 웹앱. Thymeleaf 템플릿과 H2 DB를 사용한 CRUD 예제.
-            </p>
-            <div class="tags">
-              <span>Spring</span><span>Thymeleaf</span><span>H2</span>
+            <!-- 3. 영주시 산사태 확률 -->
+            <article class="card">
+                <h3 class="card-title">영주시 산사태 확률 분석</h3>
+                <p class="card-desc">
+                기상 및 지형 데이터를 기반으로 산사태 발생 확률 예측 모델 개발. 데이터 분석 및 시각화 수행.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>scikit-learn</span><span>pandas</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/yeongju-landslide" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 4. 창원시 누비자 자전거 재배치 알고리즘 특허 -->
+            <article class="card">
+                <h3 class="card-title">창원시 누비자 자전거 재배치 알고리즘</h3>
+                <p class="card-desc">
+                자전거 재배치 최적화 알고리즘 개발 및 특허 출원. 수요 예측과 재배치 효율 극대화 모델 설계.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>Optimization</span><span>Algorithm</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/changwon-bike-opt" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 5. 국방부 군대앱 -->
+            <article class="card">
+                <h3 class="card-title">국방부 군대앱</h3>
+                <p class="card-desc">
+                군대 앱 개발 프로젝트. 식단 조회, PX 정보 제공, React와 Spring Boot 기반 프론트·백엔드 구현.
+                </p>
+                <div class="tags">
+                <span>React</span><span>Spring Boot</span><span>MySQL</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/military-app" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 6. 빅데이터 해커톤 -->
+            <article class="card">
+                <h3 class="card-title">서울시 재비산먼지 AI 예측 아이디어 제안</h3>
+                <p class="card-desc">
+                서울시 미세먼지 데이터를 활용한 AI 예측 및 시스템 개선 아이디어를 제안. 데이터 활용 전략과 모델 구조 컨셉 설계.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>scikit-learn</span><span>pandas</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/seoul-dust-prediction" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 7. 창업아이디어 경진대회 -->
+            <article class="card">
+                <h3 class="card-title">킥보드 위험감지 시스템</h3>
+                <p class="card-desc">
+                전기 킥보드 안전을 위한 위험 감지 시스템 개발. 센서 데이터 기반 위험 상황 판단 및 경고 시스템 구현.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>Sensor</span><span>Algorithm</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/kickboard-safety" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 8. 경상남도 빅데이터 공모전 -->
+            <article class="card">
+                <h3 class="card-title">경상남도 관광지 분석</h3>
+                <p class="card-desc">
+                경상남도 관광지 데이터를 분석하고, 방문객 패턴 예측 및 추천 시스템 설계.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>pandas</span><span>Visualization</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/gn-tourism" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+
+            <!-- 9. SW중심대학 AI공모전 -->
+            <article class="card">
+                <h3 class="card-title">Go-Around 모델 개발 및 제주공항 날씨 분석</h3>
+                <p class="card-desc">
+                제주공항 날씨 데이터 및 항공 데이터를 기반으로 항공기 Go-Around 상황 예측 모델 개발. PyTorch와 데이터 시각화 활용.
+                </p>
+                <div class="tags">
+                <span>Python</span><span>PyTorch</span><span>Data Analysis</span>
+                </div>
+                <div class="links">
+                <a href="https://github.com/본인아이디/go-around-model" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
             </div>
-            <div class="links">
-              <a href="https://github.com/본인아이디/mini-todo" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-        </div>
       </section>
             <!-- =========================
           Portfolio HTML
@@ -156,23 +253,32 @@
         <div class="cards">
           <article class="card">
             <h3 class="card-title">공모전 참가</h3>
-            <p class="card-desc">2023년 한국정보올림피아드, 2022년 SW 마에스트로 공모전 참여</p>
-            <p class="card-desc">2023년 한국정보올림피아드, 2022년 SW 마에스트로 공모전 참여</p>
-            <p class="card-desc">2023년 한국정보올림피아드, 2022년 SW 마에스트로 공모전 참여</p>
-            <p class="card-desc">2023년 한국정보올림피아드, 2022년 SW 마에스트로 공모전 참여</p>
+            <p class="card-desc">2023 창원시 누비자 자전거 재배치 알고리즘 — 특허 출원</p>
+            <p class="card-desc">2024 SW중심대학 디지털 경진대회_SW와 생성 AI의 만남 : AI 부문(딥페이크 검출) — 전국 13등</p>
+            <p class="card-desc">2024 세종AI 경진대회 — 자율주행 위험감지 시스템 개발</p>
+            <p class="card-desc">2024 영주시 산사태 발생 확률 예측 프로젝트</p>
+            <p class="card-desc">2024 국방부 군대앱(식단, PX 정보 제공) 개발</p>
+            <p class="card-desc">2024 빅데이터 해커톤 — 서울시 재비산먼지 AI 예측 아이디어 제안</p>
+            <p class="card-desc">2024 창업아이디어 경진대회 — 킥보드 위험감지 시스템</p>
+            <p class="card-desc">2024 경상남도 빅데이터 공모전 — 경상남도 관광지 데이터 분석</p>
+            <p class="card-desc">2025 SW중심대학 디지털 경진대회 : SW부문 — Go-Around 모델 개발 및 제주공항 날씨 데이터 분석</p>
 
-            <div class="tags"><span>공모전</span><span>SW 개발</span></div>
+            <div class="tags"><span>공모전</span><span>SW 개발</span><span>AI</span></div>
           </article>
 
           <article class="card">
             <h3 class="card-title">수상 내역</h3>
-            <p class="card-desc">2023년 전국 대학생 코딩 경진대회 1위, 2022년 캡스톤 프로젝트 최우수상</p>
-            <div class="tags"><span>수상</span><span>경진대회</span></div>
+            <p class="card-desc">2024년도 한국정보전자통신기술학회 우수논문상</p>
+            <p class="card-desc"></p>2024 세종자율주행 시범운행지구 데이터 활용 AI 경진대회 3등 장려상</p>
+            <div class="tags"><span>수상</span><span>경진대회</span><span>학술대회</span></div>
           </article>
 
           <article class="card">
             <h3 class="card-title">KCI 논문 게재</h3>
-            <p class="card-desc">“백엔드 성능 최적화 연구”, 한국정보과학회 논문지, 2024</p>
+            <p class="card-desc">“제주공항 공항·기상 데이터 기반 Go-Around 예측 모델 연구”, 한국정보전자통신기술학회 논문지, vol.18, no.4, pp.293-305, 2025</p>
+            <p class="card-desc">“기상 예측 모델의 Localization을 위한 Docker 기반 Containerization 기법 연구”, 한국정보전자통신기술학회 논문지, vol.17, no.6, pp. 462-471, 2024</p>
+            <p class="card-desc">“GloSea6에서 YOLOv8을 활용한 시각장애인 보행자 위험 감지 기법”, 한국정보전자통신기술학회 논문지, vol.17, no.6, pp. 451-461, 2024</p>
+
             <div class="tags"><span>KCI</span><span>논문</span></div>
           </article>
 
@@ -245,7 +351,7 @@
           link.classList.add('active');
         }
       });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+    }, { rthreshold: 0.3 });
 
     sections.forEach(s => io.observe(s));
   </script>
