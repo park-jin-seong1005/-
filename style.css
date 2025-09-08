@@ -314,14 +314,3 @@ body{
   color: #80888d;
   text-align: center;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-.menu-link.active {
-  background: white !important;
-  color: var(--primary) !important;
-  border-radius: 10px;
-  transition: 0.3s;
-}
