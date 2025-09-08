@@ -1,35 +1,293 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* =========================
+   Base
+========================= */
+:root{
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6b7176;
+  --primary: #25c3a3; /* 포인트 컬러 (민트) */
+  --primary-weak: #e7fbf6;
+  --border: #e9edf0;
+  --shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background: #f9f9f9;
+  font-family: 'Noto Sans KR', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
 }
 
-section {
-  padding: 50px;
+/* =========================
+   Layout
+========================= */
+.container{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 340px; /* 왼쪽 본문 / 오른쪽 사이드바 */
+  gap: 36px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-#intro {
-  background: #eafaf1;
-  text-align: center;
+/* 본문(왼쪽) */
+.content{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px 56px;
+  box-shadow: var(--shadow);
 }
 
-#skillset {
-  background: #fff;
-}
-
-#portfolio {
-  background: #f4f4f4;
-}
-
-.project {
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
+/* 사이드바(오른쪽) */
+.sidebar{
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 48px);
+  background: var(--primary);
   color: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 22px;
+}
+
+/* 반응형: 화면이 좁아지면 위로 올리고 가로 메뉴로 바꿈 */
+@media (max-width: 980px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .sidebar{
+    position: static;
+    height: auto;
+    padding: 18px 16px 10px;
+  }
+  .menu{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+  .menu a{ width: auto; }
+}
+
+/* =========================
+   Sidebar
+========================= */
+.profile{
+  text-align: center;
+  margin-bottom: 22px;
+}
+.profile img{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+.name{
+  margin: 14px 0 2px;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.role{
+  margin: 0;
+  opacity: .9;
+}
+
+/* 메뉴 */
+.menu{
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.menu a{
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,.14);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  transition: background .2s, transform .06s;
+}
+.menu a:hover{ background: rgba(255,255,255,.25); }
+.menu a:active{ transform: translateY(1px); }
+.menu a.active{
+  background: #fff;
+  color: var(--primary);
+}
+
+/* =========================
+   Content
+========================= */
+.section + .section{ margin-top: 56px; }
+
+.title-1{
+  font-size: 2.6rem;
+  margin: 0 0 12px;
+  color: var(--primary);
+  letter-spacing: .3px;
+}
+.title-2{
+  font-size: 1.8rem;
+  margin: 0 0 18px;
+}
+
+.lead{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 8px 0 14px;
+}
+.accent{ color: var(--primary); }
+
+.body{ color: var(--muted); }
+
+/* 인용문 */
+.quote{
+  margin: 18px 0 18px;
+  padding-left: 16px;
+  border-left: 6px solid var(--primary);
+  color: #3c4a46;
+  font-style: italic;
+}
+
+/* 타임라인 */
+.timeline{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.timeline li{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--primary-weak);
+  border: 1px solid #c6efe4;
+  border-radius: 12px;
+}
+.timeline .time{
+  font-weight: 700;
+  color: #2aa18a;
+}
+.timeline .desc{
+  color: #394043;
+}
+
+/* 스킬 - 칩 */
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.chip{
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eef5f3;
+  border: 1px solid #d9e6e2;
+  font-weight: 600;
+}
+
+/* 스킬 - 바 */
+.skills{
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+.skill .skill-head{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.skill .bar{
+  height: 10px;
+  background: #edf2f5;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #e1e7eb;
+}
+.skill .bar i{
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #25c3a3, #5fd7c1);
+}
+
+/* 카드형 포트폴리오 */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.card-title{
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.card-desc{ color: var(--muted); margin: 0 0 12px; }
+
+.tags{
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.tags span{
+  font-size: .86rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: #f3faf8;
+  border: 1px solid #d6efe8;
+}
+
+.links{
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.links a{
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 10px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 8px;
+  transition: background .2s, color .2s;
+}
+.links a:hover{
+  background: var(--primary);
+  color: #fff;
+}
+
+/* 연락처 */
+.contact{
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid; gap: 10px;
+}
+.contact a{ color: var(--primary); text-decoration: none; }
+.contact a:hover{ text-decoration: underline; }
+
+/* 푸터 */
+.footer{
+  margin-top: 56px;
+  color: #80888d;
+  text-align: center;
 }

@@ -1,37 +1,210 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>ParkHeonJin Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Park JinSeong | Portfolio</title>
+
+  <!-- 폰트 (원하면 삭제 가능) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section id="intro">
-    <h1>Introduction</h1>
-    <p>안녕하세요.<br>저는 신입 백엔드 개발자 박현진입니다.</p>
-  </section>
+  <!-- 페이지 전체 레이아웃 -->
+  <div class="container">
 
-  <section id="skillset">
-    <h2>SkillSet</h2>
-    <ul>
-      <li>Java / Spring Boot</li>
-      <li>Python / Django</li>
-      <li>MySQL / MongoDB</li>
-      <li>Git / GitHub</li>
-    </ul>
-  </section>
+    <!-- 메인 컨텐츠 -->
+    <main class="content">
+      <!-- Introduction -->
+      <section id="intro" class="section">
+        <h1 class="title-1">Introduction</h1>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="project">
-      <h3>프로젝트 1</h3>
-      <p>프로젝트 설명...</p>
-      <a href="https://github.com/username/project1">GitHub 링크</a>
-    </div>
-  </section>
+        <p class="lead">
+          안녕하세요.<br>
+          저는 신입 <span class="accent">백엔드</span> 직무 지원자 <b>박진성</b>입니다.
+        </p>
 
-  <footer>
-    <p>© 2025 Park HeonJin</p>
-  </footer>
+        <figure class="quote">
+          <blockquote>
+            “지금 자면 꿈을 꿀 수 있지만 지금 노력하면 꿈을 이룰 수 있다.”
+          </blockquote>
+        </figure>
+
+        <p class="body">
+          공부를 하고 나서 거기서 그치지 않고 관련된 기술을 적용해 개발을 해보거나
+          필요한 프로그램을 개발하는 것을 좋아합니다. 백엔드 기술에 관심이 있으며
+          커뮤니케이션과 코드 리뷰를 좋아합니다. 현재 신입 백엔드 개발자로 구직 중입니다.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <h2 class="title-2">Overall Experiences</h2>
+
+        <ul class="timeline">
+          <li>
+            <div class="time">2024.07 – 2024.08</div>
+            <div class="desc">
+              <b>계절학기 현장실습</b> — 백엔드 API 유지보수 및 간단한 CRUD 기능 개발
+            </div>
+          </li>
+          <li>
+            <div class="time">2024.03 – 2024.06</div>
+            <div class="desc">
+              <b>팀 프로젝트</b> — Spring Boot + MySQL로 소규모 웹 서비스 제작, 배포 자동화 경험(GitHub Actions)
+            </div>
+          </li>
+          <li>
+            <div class="time">2023 – 현재</div>
+            <div class="desc">
+              <b>개인 학습</b> — Java, Spring Boot, JPA, REST API, Git/GitHub, 배포(EC2) 등
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SkillSet -->
+      <section id="skillset" class="section">
+        <h2 class="title-2">SkillSet</h2>
+
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">JPA / Hibernate</span>
+          <span class="chip">REST API</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Git / GitHub</span>
+          <span class="chip">Docker(기초)</span>
+          <span class="chip">AWS EC2(배포)</span>
+        </div>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-head"><span>Java / Spring</span><span>상</span></div>
+            <div class="bar"><i style="width: 85%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>DB 설계 / SQL</span><span>중상</span></div>
+            <div class="bar"><i style="width: 75%"></i></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>CI/CD · 배포</span><span>중</span></div>
+            <div class="bar"><i style="width: 60%"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="section">
+        <h2 class="title-2">Portfolio</h2>
+
+        <div class="cards">
+          <!-- 프로젝트 카드 예시 1 -->
+          <article class="card">
+            <h3 class="card-title">Habit Planner</h3>
+            <p class="card-desc">
+              Spring Boot와 JPA로 구현한 습관 관리 서비스. JWT 인증, 일정 리마인드, 통계 대시보드 제공.
+            </p>
+            <div class="tags">
+              <span>Spring Boot</span><span>JPA</span><span>MySQL</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/본인아이디/habit-planner" target="_blank" rel="noopener">GitHub</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <!-- 프로젝트 카드 예시 2 -->
+          <article class="card">
+            <h3 class="card-title">Book Review API</h3>
+            <p class="card-desc">
+              책 리뷰 REST API. 계정/권한, 페이징, 예외 처리, 통합 테스트 작성.
+            </p>
+            <div class="tags">
+              <span>Spring</span><span>REST</span><span>JUnit</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/본인아이디/book-review-api" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <!-- 프로젝트 카드 예시 3 -->
+          <article class="card">
+            <h3 class="card-title">Mini Todo</h3>
+            <p class="card-desc">
+              간단한 Todo 웹앱. Thymeleaf 템플릿과 H2 DB를 사용한 CRUD 예제.
+            </p>
+            <div class="tags">
+              <span>Spring</span><span>Thymeleaf</span><span>H2</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/본인아이디/mini-todo" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2 class="title-2">Contact</h2>
+        <ul class="contact">
+          <li><b>Email</b> — <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li><b>GitHub</b> — <a href="https://github.com/본인아이디" target="_blank" rel="noopener">github.com/본인아이디</a></li>
+          <li><b>LinkedIn</b> — <a href="#" target="_blank" rel="noopener">링크 추가</a></li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Park JinSeong
+      </footer>
+    </main>
+
+    <!-- 오른쪽 사이드바 -->
+    <aside class="sidebar">
+      <div class="profile">
+        <!-- 프로필 이미지 경로: /images/profile.jpg 로 저장 -->
+        <img src="images/profile.jpg" alt="박진성 프로필 사진" />
+        <h2 class="name">Park JinSeong</h2>
+        <p class="role">Backend Developer</p>
+      </div>
+
+      <nav class="menu" aria-label="Section navigation">
+        <a href="#intro" class="menu-link">Introduction</a>
+        <a href="#experience" class="menu-link">Experience</a>
+        <a href="#skillset" class="menu-link">SkillSet</a>
+        <a href="#portfolio" class="menu-link">Portfolio</a>
+        <a href="#contact" class="menu-link">Contact</a>
+      </nav>
+    </aside>
+  </div>
+
+  <script>
+    // 현재 연도
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 스크롤 시 사이드 메뉴 하이라이트
+    const sections = document.querySelectorAll('main .section');
+    const links = document.querySelectorAll('.menu-link');
+
+    const map = {};
+    sections.forEach(s => { map['#' + s.id] = s; });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = document.querySelector(`.menu a[href="${id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+
+    sections.forEach(s => io.observe(s));
+  </script>
 </body>
 </html>
