@@ -1,0 +1,35 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+}
+
+section {
+  padding: 50px;
+}
+
+#intro {
+  background: #eafaf1;
+  text-align: center;
+}
+
+#skillset {
+  background: #fff;
+}
+
+#portfolio {
+  background: #f4f4f4;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
