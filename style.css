@@ -181,12 +181,12 @@ body{
   gap: 14px;
   padding: 14px 16px;
   background: var(--primary-weak);
-  border: 1px solid #c6efe4;
+  border: 1px solid #cae4dd;
   border-radius: 12px;
 }
 .timeline .time{
   font-weight: 700;
-  color: #2aa18a;
+  color: #dcece9;
 }
 .timeline .desc{
   color: #394043;
@@ -289,7 +289,7 @@ body{
 }
 .tags span{
   background: #d2f2ed;
-  border-color: #a6e1d7;
+  border-color: #cee2df;
 }
 .links a{
   border-color: var(--accent);
