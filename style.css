@@ -232,10 +232,11 @@ body{
 }
 
 /* 카드형 포트폴리오 */
-.cards{
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr; /* 2열 고정 */
   gap: 16px;
+  grid-auto-flow: row; /* 행 단위로 차곡차곡 배치 */
 }
 .card{
   background: #fff;
