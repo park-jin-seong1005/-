@@ -374,7 +374,6 @@ body{
     border-radius: 6px;
     color: #333;
 }
-
 /* Achievements 섹션 전용 */
 #achievements .cards {
   display: grid;
@@ -383,14 +382,14 @@ body{
   align-items: start;
 }
 
-/* 왼쪽 정렬 (공모전, 학회, 연구실 활동) */
-#achievements .cards > .card:nth-child(1) { grid-column: 1; }
-#achievements .cards > .card:nth-child(4) { grid-column: 1; }
-#achievements .cards > .card:nth-child(5) { grid-column: 1; }
+/* 왼쪽 열 카드 */
+#achievements .cards > .card:nth-child(1) { grid-column: 1; } /* 공모전 */
+#achievements .cards > .card:nth-child(4) { grid-column: 1; } /* 학회 발표 */
+#achievements .cards > .card:nth-child(5) { grid-column: 1; } /* 연구실 활동 */
 
-/* 오른쪽 정렬 (수상 내역, KCI 논문) */
-#achievements .cards > .card:nth-child(2) { grid-column: 2; }
-#achievements .cards > .card:nth-child(3) { grid-column: 2; }
+/* 오른쪽 열 카드 */
+#achievements .cards > .card:nth-child(2) { grid-column: 2; } /* 수상 내역 */
+#achievements .cards > .card:nth-child(3) { grid-column: 2; } /* KCI 논문 */
 
 /* (있다면) 추가 카드 오른쪽 아래 */
 #achievements .cards > .card:nth-child(6) { grid-column: 2; }
