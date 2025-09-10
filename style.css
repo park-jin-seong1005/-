@@ -384,24 +384,18 @@ body{
   align-items: start;
 }
 
-/* 왼쪽 열: 공모전, 학회, 연구실 활동 */
-#achievements .cards > .card:nth-child(1),
-#achievements .cards > .card:nth-child(4),
-#achievements .cards > .card:nth-child(5) {
-  grid-column: 1;
+#achievements .cards-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* 카드 간격 */
 }
 
-/* 오른쪽 열: 수상 내역 + KCI 논문 */
-#achievements .cards > .card:nth-child(2),
-#achievements .cards > .card:nth-child(3) {
-  grid-column: 2;
-  grid-row: auto; /* 행 고정 해제 */
-}
-
-/* 모바일 대응 */
+/* 반응형 - 모바일에서는 1열 */
 @media (max-width: 980px) {
   #achievements .cards {
     grid-template-columns: 1fr;
   }
+  #achievements .cards-right {
+    flex-direction: column;
+  }
 }
-
