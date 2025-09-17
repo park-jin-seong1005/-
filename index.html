@@ -114,41 +114,84 @@
         </section>
         <!-- 자격증 -->
         
-        <section id="Licenses" class="section">
-        <h2 class="title-2">Certifications & Licenses</h2>
         
-        <div class="certifications-grid">
-            <div class="cert-card tech">
-            <h3 class="cert-title">정보처리기사</h3>
-            <p class="cert-desc">Information Processing Engineer</p>
-            <span class="cert-type">국가기술자격</span>
+        <!-- 자격증 섹션 개선 -->
+        <section id="licenses" class="section">
+          <h2 class="title-2">Certifications & Licenses</h2>
+          
+          <div class="cert-grid">
+            <div class="cert-item">
+              <div class="cert-content">
+                <h3>정보처리기사</h3>
+                <p>Information Processing Engineer</p>
+                <span class="cert-type">국가기술자격</span>
+              </div>
             </div>
             
-            <div class="cert-card database">
-            <h3 class="cert-title">SQLD</h3>
-            <p class="cert-desc">SQL Developer</p>
-            <span class="cert-type">데이터베이스</span>
+            <div class="cert-item">
+              <div class="cert-content">
+                <h3>SQLD</h3>
+                <p>SQL Developer</p>
+                <span class="cert-type">데이터베이스</span>
+              </div>
             </div>
             
-            <div class="cert-card system">
-            <h3 class="cert-title">리눅스마스터 2급</h3>
-            <p class="cert-desc">Linux Master Level 2</p>
-            <span class="cert-type">시스템 관리</span>
+            <div class="cert-item">
+              <div class="cert-content">
+                <h3>리눅스마스터 2급</h3>
+                <p>Linux Master Level 2</p>
+                <span class="cert-type">시스템 관리</span>
+              </div>
             </div>
             
-            <div class="cert-card office">
-            <h3 class="cert-title">컴퓨터활용능력 1급(결과 대기중 - 09/23)</h3>
-            <p class="cert-desc">Computer Specialist Level 1</p>
-            <span class="cert-type">사무자동화</span>
+            <div class="cert-item">
+              <div class="cert-content">
+                <h3>컴퓨터활용능력 1급(9/23일 결과발표)</h3>
+                <p>Computer Specialist Level 1</p>
+                <span class="cert-type">사무자동화</span>
+              </div>
             </div>
             
-            <div class="cert-card language">
-            <h3 class="cert-title">TOEIC Speaking IH</h3>
-            <p class="cert-desc">Intermediate High Level</p>
-            <span class="cert-type">어학능력</span>
+            <div class="cert-item">
+              <div class="cert-content">
+                <h3>TOEIC Speaking IH</h3>
+                <p>Intermediate High Level</p>
+                <span class="cert-type">어학능력</span>
+              </div>
             </div>
-        </div>
+          </div>
         </section>
+
+        <!-- 연구실 실적 섹션 신설 -->
+        <section id="research" class="section">
+          <h2 class="title-2">연구실 실적</h2>
+          <p class="card-desc">창원대학교 컴퓨터공학과 연구실 소속 (2022.05 – 현재), 차세대 전산과학 기술접합을 위한 기반 기술 개발 과제 참여, 백엔드 서버 관리 및 AI 모델 개발</p>
+            
+          <div class="research-grid">
+            <div class="research-item">
+              <h3>특허</h3>
+              <p>창원시 누비자 자전거 재배치 알고리즘</p>
+              <span class="research-status">특허출원</span>
+            </div>
+            
+            <div class="research-item">
+              <h3>논문 (1저자 2편, 2저자 1편)</h3>
+              <div class="paper-list">
+                <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003239448" target="_blank">1저자 - Go-Around 예측 모델 연구</a>
+                <a href="https://doi.org/10.17661/jkiiect.2024.17.6.451" target="_blank">1저자 - Docker 기반 컨테이너화 기법 연구</a>
+                <a href="https://doi.org/10.17661/jkiiect.2024.17.6.451" target="_blank">2저자 - 시각장애인 보행자 위험 감지 기법"</a>
+              </div>
+              <span class="research-status">KCI 등재</span>
+            </div>
+            
+            <div class="research-item">
+              <h3>저작권</h3>
+              <p>제조기업 사무자동화를 위한 RPA 소프트웨어</p>
+              <span class="research-status">등록완료</span>
+            </div>
+          </div>
+        </section>
+
       <!-- Portfolio -->
       <section id="portfolio" class="section">
         <h2 class="title-2">Portfolio</h2>
@@ -356,9 +399,19 @@
             <div class="tags"><span>공모전</span><span>SW 개발</span><span>AI</span></div>
             </article>
 
+            <article class="card">
+            <h3 class="card-title">학회 발표</h3>
+            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2025, "단일 이미지 기반 Novel View Synthesis를 위한 Segmentation 활용 기법연구" 발표</p>
+            <p class="card-desc">한국정보전자통신기술학회 춘계종합학술발표회 2025, "효과적인 기상 예측 모델 배포를 위한 Docker 컨테이너화 기법 연구" 발표</p>
+            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "도로 돌발상황 관제를 위한 YOLOv8 기반 이상 보행자 탐지 기법 연구" 발표</p>
+            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "RPA 소프트웨어를 활용한 지역 제조업체의 사무자동화 기술 연구" 발표</p>
+            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "교통사각지대 해소를 위한 최적 입지 추천 알고리즘 기반의 DRT 범위 연구" 발표</p>
+            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "실시간 공공 자전거 재배치를 위한 HDPRA 기법 연구" 발표</p>
+            <div class="tags"><span>학회</span><span>발표</span></div>
+            </article>
+            
             <!-- 수상 내역을 간단하게 정리 -->
             <div class="cards-right">
-
               <article class="card">
               <h3 class="card-title">수상 내역</h3>
               <p class="card-desc">2024년도 한국정보전자통신기술학회 우수논문상</p>
@@ -367,7 +420,7 @@
               </article>
 
               <!-- KCI 논문을 별도 카드로 분리 -->
-              <article class="card">
+              <!-- <article class="card">
               <h3 class="card-title">KCI 논문 게재 (1저자 2편, 2저자 1편)</h3>
               <p class="card-desc">
                   <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003239448" target="_blank" rel="noopener">
@@ -385,25 +438,16 @@
                   </a>
               </p>
               <div class="tags"><span>KCI</span><span>논문</span><span>1저자</span></div>
-              </article>
+              </article> -->
             </div>
 
-            <article class="card">
-            <h3 class="card-title">학회 발표</h3>
-            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2025, "단일 이미지 기반 Novel View Synthesis를 위한 Segmentation 활용 기법연구" 발표</p>
-            <p class="card-desc">한국정보전자통신기술학회 춘계종합학술발표회 2025, "효과적인 기상 예측 모델 배포를 위한 Docker 컨테이너화 기법 연구" 발표</p>
-            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "도로 돌발상황 관제를 위한 YOLOv8 기반 이상 보행자 탐지 기법 연구" 발표</p>
-            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "RPA 소프트웨어를 활용한 지역 제조업체의 사무자동화 기술 연구" 발표</p>
-            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "교통사각지대 해소를 위한 최적 입지 추천 알고리즘 기반의 DRT 범위 연구" 발표</p>
-            <p class="card-desc">한국정보전자통신기술학회 추계종합학술발표회 2024, "실시간 공공 자전거 재배치를 위한 HDPRA 기법 연구" 발표</p>
-            <div class="tags"><span>학회</span><span>발표</span></div>
-            </article>
 
-            <article class="card">
+
+            <!-- <article class="card">
             <h3 class="card-title">연구실 활동</h3>
             <p class="card-desc">창원대학교 컴퓨터공학과 연구실 소속 (2022.05 – 현재), 차세대 전산과학 기술접합을 위한 기반 기술 개발 과제 참여, 백엔드 서버 관리 및 AI 모델 개발</p>
             <div class="tags"><span>연구실</span><span>백엔드</span></div>
-            </article>
+            </article> -->
         </div>
         </section>
 
